@@ -6,3 +6,6 @@ compatibility_date = "2023-08-14"
 binding = "MONESTING_NOTIFICATION_STORAGE"
 id = "806593c154194fb7aa88745d3b39a8da"
 preview_id = "9b4541df7d054447b1003f5af15f00c2"
+
+[triggers]
+crons = ["0 15 * * *"]

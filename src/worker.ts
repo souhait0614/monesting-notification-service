@@ -83,10 +83,10 @@ const app = new Hono<{ Bindings: Env }>()
 const scheduled: ExportedHandlerScheduledHandler<Env> = async (controller, env, ctx) => {
   const secret = env.API_SECRET;
   const apiUrl = env.API_URL;
-  await fetch(`${apiUrl}/notifications/push`, {
+  await fetch(`${apiUrl}/api/notifications/push`, {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${secret}`,
+      Authorization: `${secret}`,
     },
   });
 };
